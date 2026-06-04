@@ -25,3 +25,4 @@ loc() {
 }
 
 
+alias dlazygit='lazygit --git-dir=/home/sanjoy/.dotfiles/ --work-tree=/home/sanjoy'
