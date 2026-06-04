@@ -24,5 +24,6 @@ loc() {
   FEATURE101_BASE_URL=http://localhost:3000 npx feature101 add "$1"
 }
 
-
-alias dlazygit='lazygit --git-dir=/home/sanjoy/.dotfiles/ --work-tree=/home/sanjoy'
+# dotfiles
+alias dotfiles='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+alias dlazygit='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'

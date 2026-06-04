@@ -31,5 +31,3 @@ source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighti
 eval "$(starship init zsh)"
 
 source ~/.config/zsh/aliases.zsh
-
-alias dotfiles='/usr/bin/git --git-dir=/home/sanjoy/.dotfiles/ --work-tree=/home/sanjoy'
