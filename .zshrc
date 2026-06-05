@@ -31,3 +31,16 @@ source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighti
 eval "$(starship init zsh)"
 
 source ~/.config/zsh/aliases.zsh
+
+# Tmux window name = parent/current directory
+function chpwd() {
+  [[ -z "$TMUX" ]] && return
+
+  local p="$PWD"
+  local name="$(basename "$(dirname "$p")")/$(basename "$p")"
+
+  tmux rename-window "$name" 2>/dev/null
+}
+
+# Run once for the initial directory too
+chpwd
