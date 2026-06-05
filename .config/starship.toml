@@ -5,21 +5,10 @@ format = """
 $os\
 [](bg:blue fg:surface0)\
 $directory\
-[](fg:blue bg:mauve)\
+[ ](fg:blue bg:mauve)\
 $git_branch\
 $git_status\
-[](fg:mauve bg:sapphire)\
-$c\
-$rust\
-$golang\
-$php\
-$java\
-$kotlin\
-$haskell\
-$python\
-[](fg:sapphire bg:blue)\
-$docker_context\
-[ ](fg:blue)\
+[ ](fg:mauve)\
 """
 right_format = """$status$cmd_duration$nodejs"""
 palette = 'catppuccin_mocha'
