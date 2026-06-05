@@ -5,10 +5,9 @@ format = """
 $os\
 [](bg:blue fg:surface0)\
 $directory\
-[ ](fg:blue bg:mauve)\
+${custom.dir_close}\
 $git_branch\
 $git_status\
-[ ](fg:mauve)\
 """
 right_format = """$status$cmd_duration$nodejs"""
 palette = 'catppuccin_mocha'
@@ -104,14 +103,20 @@ truncation_symbol = ""
 "Pictures" = " "
 "Developer" = "󰲋 "
 
+[custom.dir_close]
+when = '! git rev-parse --git-dir 2>/dev/null'
+command = 'printf "\ue0b0"'
+style = "fg:blue"
+format = "[$output]($style) "
+
 [git_branch]
 symbol = ""
 style = "bg:mauve"
-format = '[[ $symbol $branch ](fg:base bg:mauve)]($style)'
+format = '[ ](fg:blue bg:mauve)[[ $symbol $branch ](fg:base bg:mauve)]($style)'
 
 [git_status]
 style = "bg:mauve"
-format = '[[($all_status$ahead_behind )](fg:base bg:mauve)]($style)'
+format = '[[($all_status$ahead_behind )](fg:base bg:mauve)]($style)[ ](fg:mauve)'
 
 [nodejs]
 symbol = ""
