@@ -27,6 +27,19 @@ if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then compinit; else compinit -C; fi
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Catppuccin Mocha - zsh-syntax-highlighting
+ZSH_HIGHLIGHT_STYLES[command]='fg=#a6e3a1'
+ZSH_HIGHLIGHT_STYLES[builtin]='fg=#89b4fa'
+ZSH_HIGHLIGHT_STYLES[function]='fg=#89b4fa'
+ZSH_HIGHLIGHT_STYLES[alias]='fg=#89b4fa'
+ZSH_HIGHLIGHT_STYLES[path]='fg=#cdd6f4,underline'
+ZSH_HIGHLIGHT_STYLES[string]='fg=#f9e2af'
+ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#f38ba8'
+ZSH_HIGHLIGHT_STYLES[reserved-word]='fg=#cba6f7'
+ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=#f9e2af'
+ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=#f9e2af'
+ZSH_HIGHLIGHT_STYLES[comment]='fg=#585b70'
+
 # Starship
 eval "$(starship init zsh)"
 
@@ -44,3 +57,4 @@ function chpwd() {
 
 # Run once for the initial directory too
 chpwd
+alias brave="brave-browser --profile-directory=\"Profile 4\""
