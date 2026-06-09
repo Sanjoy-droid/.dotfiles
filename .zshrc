@@ -23,6 +23,12 @@ fi
 autoload -Uz compinit
 if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then compinit; else compinit -C; fi
 
+export ZSH="$HOME/.oh-my-zsh"
+source $ZSH/oh-my-zsh.sh
+
+# Starship
+eval "$(starship init zsh)"
+
 # Plugins
 source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
@@ -40,8 +46,6 @@ ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=#f9e2af'
 ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=#f9e2af'
 ZSH_HIGHLIGHT_STYLES[comment]='fg=#585b70'
 
-# Starship
-eval "$(starship init zsh)"
 
 source ~/.config/zsh/aliases.zsh
 
