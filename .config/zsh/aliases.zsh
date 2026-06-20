@@ -18,10 +18,20 @@ alias pg='npx prisma generate'
 alias dev='npm run dev'
 alias build='npm run build'
 
-#local npx commands
+#local 
 
 loc() {
   FEATURE101_BASE_URL=http://localhost:3000 npx feature101 add "$1"
+}
+
+#prod 
+prod() {
+  npx feature101@latest add "$1"
+}
+
+#shad
+shad() {
+  npx shadcn@latest add "$@"
 }
 
 # dotfiles
