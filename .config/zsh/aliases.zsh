@@ -1,7 +1,22 @@
 
+# zoxide
+eval "$(zoxide init zsh)"
 
-# ~/.oh-my-zsh/custom/aliases.zsh
+# fzf - fuzzy search files/history
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+source /usr/share/doc/fzf/examples/completion.zsh
 
+# fd / bat / eza naming fix (ubuntu ships these under different binary names)
+alias fd='fdfind'
+alias bat='batcat'
+
+# eza - better ls
+alias ls='eza --icons'
+alias ll='eza -la --icons'
+alias lt='eza --tree --icons --level=2'
+
+# ripgrep shortcut
+alias grep='rg'
 
 # tmux
 alias t='tmux'
@@ -15,7 +30,7 @@ alias prf='npx prisma migrate reset -f'
 alias pg='npx prisma generate'
 
 #npm
-alias dev='npm run dev'
+alias dev='NODE_OPTIONS="--max-old-space-size=1024" npm run dev'
 alias build='npm run build'
 
 #local 
