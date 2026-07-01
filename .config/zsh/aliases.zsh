@@ -30,7 +30,7 @@ alias prf='npx prisma migrate reset -f'
 alias pg='npx prisma generate'
 
 #npm
-alias dev='NODE_OPTIONS="--max-old-space-size=1024" npm run dev'
+alias dev='systemd-run --user --scope -p MemoryMax=800M -p MemorySwapMax=400M npm run dev'
 alias build='npm run build'
 
 #local 
